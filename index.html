@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BeatShare · Global Music Sharing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="site-header">
+        <a class="logo" href="index.html">BeatShare</a>
+        <nav class="nav">
+          <a class="nav-link" href="discover.html" data-i18n="navDiscover">Discover</a>
+          <a class="nav-link" href="community.html" data-i18n="navCommunity">Community</a>
+          <a class="nav-link" href="create.html" data-i18n="navCreate">Create</a>
+        </nav>
+        <div class="language-picker">
+          <label for="languageSelect" data-i18n="languageLabel">Language</label>
+          <select id="languageSelect" aria-label="Language selector">
+            <option value="en">English</option>
+            <option value="zh">中文</option>
+            <option value="es">Español</option>
+            <option value="jp">日本語</option>
+          </select>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="hero-text">
+            <p class="hero-label" data-i18n="heroLabel">Featured curator</p>
+            <h1 data-i18n="heroTitle">
+              Share rare grooves & discover new voices.
+            </h1>
+            <p class="hero-sub" data-i18n="heroSubtitle">
+              Upload beats, collab across cultures, and build playlists that travel
+              the globe.
+            </p>
+            <div class="hero-actions">
+              <button class="primary" data-i18n="ctaShare">Share a track</button>
+              <button class="ghost" data-i18n="ctaBrowse">Browse sessions</button>
+            </div>
+            <div class="hero-stats">
+              <div>
+                <p class="stat" id="statUploads">2,148</p>
+                <span data-i18n="statUploads">Uploads this week</span>
+              </div>
+              <div>
+                <p class="stat" id="statCollabs">438</p>
+                <span data-i18n="statCollabs">Cross-language collabs</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero-card" aria-live="polite">
+            <p class="mini-label" data-i18n="nowPlaying">Now playing</p>
+            <h3 id="nowPlayingTitle">Aurora Echoes</h3>
+            <p class="muted" id="nowPlayingArtist">by Kumo</p>
+            <div class="waveform">
+              <span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="player">
+              <button class="player-btn" id="playToggle" aria-label="Play">
+                ▶
+              </button>
+              <div class="progress">
+                <div class="progress-filled" id="progressFilled"></div>
+              </div>
+              <span class="timestamp" id="timestamp">1:24</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="trending" aria-label="Trending sessions">
+          <div class="section-header">
+            <div>
+              <p class="mini-label" data-i18n="trendingLabel">Trending sessions</p>
+              <h2 data-i18n="trendingTitle">Culture-shifting drops</h2>
+            </div>
+            <button class="ghost" data-i18n="trendingMore">View all</button>
+          </div>
+          <div class="grid" id="trendingGrid"></div>
+        </section>
+
+        <section class="split">
+          <article class="card community" aria-live="polite">
+            <p class="mini-label" data-i18n="communityLabel">Live feed</p>
+            <h2 data-i18n="communityTitle">Community vibes</h2>
+            <ul id="communityFeed" class="feed"></ul>
+          </article>
+
+          <article class="card share">
+            <p class="mini-label" data-i18n="shareLabel">Share yours</p>
+            <h2 data-i18n="shareTitle">Drop a new track</h2>
+            <form id="shareForm">
+              <label>
+                <span data-i18n="formTitle">Track title</span>
+                <input
+                  type="text"
+                  name="title"
+                  required
+                  placeholder="E.g. Neon Coast"
+                  data-i18n-placeholder="placeholderTitle"
+                />
+              </label>
+              <label>
+                <span data-i18n="formGenre">Genre / mood</span>
+                <input
+                  type="text"
+                  name="genre"
+                  required
+                  placeholder="E.g. Future bass"
+                  data-i18n-placeholder="placeholderGenre"
+                />
+              </label>
+              <label>
+                <span data-i18n="formLink">Streaming link</span>
+                <input
+                  type="url"
+                  name="link"
+                  required
+                  placeholder="https://"
+                  data-i18n-placeholder="placeholderLink"
+                />
+              </label>
+              <label>
+                <span data-i18n="formNotes">Notes for collaborators</span>
+                <textarea
+                  name="notes"
+                  rows="3"
+                  placeholder="What vibe are you chasing?"
+                  data-i18n-placeholder="placeholderNotes"
+                ></textarea>
+              </label>
+              <button class="primary" type="submit" data-i18n="formSubmit">
+                Publish now
+              </button>
+              <p class="form-status" id="formStatus" role="status"></p>
+            </form>
+          </article>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p data-i18n="footerTag">Built for music makers everywhere.</p>
+        <small>&copy; <span id="year"></span> BeatShare</small>
+      </footer>
+    </div>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>

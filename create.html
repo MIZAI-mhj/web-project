@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BeatShare · Global Music Sharing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="create">
+    <div class="page">
+      <header class="site-header">
+        <a class="logo" href="index.html">BeatShare</a>
+        <nav class="nav">
+          <a class="nav-link" href="discover.html" data-i18n="navDiscover">Discover</a>
+          <a class="nav-link" href="community.html" data-i18n="navCommunity">Community</a>
+          <a class="nav-link active" href="create.html" data-i18n="navCreate" aria-current="page">Create</a>
+        </nav>
+        <div class="language-picker">
+          <label for="languageSelect" data-i18n="languageLabel">Language</label>
+          <select id="languageSelect" aria-label="Language selector">
+            <option value="en">English</option>
+            <option value="zh">中文</option>
+            <option value="es">Español</option>
+            <option value="jp">日本語</option>
+          </select>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero create-hero">
+          <div class="hero-text">
+            <p class="hero-label" data-i18n="createHeroLabel">Creator hub</p>
+            <h1 data-i18n="createHeroTitle">Ship your track with confidence.</h1>
+            <p class="hero-sub" data-i18n="createHeroSubtitle">
+              From gain staging to cover art, this space keeps every step organized so
+              collaborators stay in sync.
+            </p>
+            <div class="hero-actions">
+              <button class="primary" data-i18n="createHeroCta">Upload assets</button>
+            </div>
+          </div>
+          <article class="hero-card">
+            <p class="mini-label" data-i18n="createChecklistTitle">Launch checklist</p>
+            <ol class="steps-list">
+              <li data-i18n="createStep1">Bounce stems at -6 dB headroom.</li>
+              <li data-i18n="createStep2">Export a 30s teaser for promos.</li>
+              <li data-i18n="createStep3">Write collaborator credits & splits.</li>
+              <li data-i18n="createStep4">Attach artwork, lyrics, and notes.</li>
+            </ol>
+          </article>
+        </section>
+
+        <section class="trending">
+          <div class="section-header">
+            <div>
+              <p class="mini-label" data-i18n="createToolsTitle">Creator tools</p>
+              <h2 data-i18n="createToolsSubtitle">Resources that keep the handoff smooth.</h2>
+            </div>
+          </div>
+          <div class="tools-grid">
+            <article class="tool-card">
+              <h3 data-i18n="createTool1Title">Session template</h3>
+              <p data-i18n="createTool1Desc">Uploadable Ableton & Logic files with color-coded buses.</p>
+            </article>
+            <article class="tool-card">
+              <h3 data-i18n="createTool2Title">License builder</h3>
+              <p data-i18n="createTool2Desc">Generate split sheets and remix agreements in minutes.</p>
+            </article>
+            <article class="tool-card">
+              <h3 data-i18n="createTool3Title">Reference locker</h3>
+              <p data-i18n="createTool3Desc">Collect inspo clips, moodboards, and mix notes per project.</p>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p data-i18n="footerTag">Built for music makers everywhere.</p>
+        <small>&copy; <span id="year"></span> BeatShare</small>
+      </footer>
+    </div>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>

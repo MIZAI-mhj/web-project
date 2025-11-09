@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BeatShare · Global Music Sharing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="community">
+    <div class="page">
+      <header class="site-header">
+        <a class="logo" href="index.html">BeatShare</a>
+        <nav class="nav">
+          <a class="nav-link" href="discover.html" data-i18n="navDiscover">Discover</a>
+          <a class="nav-link active" href="community.html" data-i18n="navCommunity" aria-current="page">Community</a>
+          <a class="nav-link" href="create.html" data-i18n="navCreate">Create</a>
+        </nav>
+        <div class="language-picker">
+          <label for="languageSelect" data-i18n="languageLabel">Language</label>
+          <select id="languageSelect" aria-label="Language selector">
+            <option value="en">English</option>
+            <option value="zh">中文</option>
+            <option value="es">Español</option>
+            <option value="jp">日本語</option>
+          </select>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero community-hero">
+          <div class="hero-text">
+            <p class="hero-label" data-i18n="communityHeroLabel">Live rooms</p>
+            <h1 data-i18n="communityHeroTitle">Build projects with creators in every time zone.</h1>
+            <p class="hero-sub" data-i18n="communityHeroSubtitle">
+              Drop stems, ask for feedback, and join rotating mentor hours. The
+              community feed keeps collaborators within one message.
+            </p>
+            <div class="hero-actions">
+              <button class="primary" data-i18n="communityHeroCta">Open a room</button>
+            </div>
+          </div>
+          <article class="hero-card">
+            <p class="mini-label" data-i18n="communityStatsLabel">Today's highlights</p>
+            <ul class="stat-list">
+              <li>
+                <span class="stat" data-i18n="communityStat1Value">86</span>
+                <span class="muted" data-i18n="communityStat1Label">Mentor responses</span>
+              </li>
+              <li>
+                <span class="stat" data-i18n="communityStat2Value">43</span>
+                <span class="muted" data-i18n="communityStat2Label">New threads</span>
+              </li>
+              <li>
+                <span class="stat" data-i18n="communityStat3Value">129</span>
+                <span class="muted" data-i18n="communityStat3Label">Files exchanged</span>
+              </li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="trending">
+          <div class="section-header">
+            <div>
+              <p class="mini-label" data-i18n="communityRoomsTitle">Collab rooms</p>
+              <h2 data-i18n="communityRoomsSubtitle">Pick a space that matches your workflow.</h2>
+            </div>
+          </div>
+          <div class="card-grid">
+            <article class="card playlist-card">
+              <h3 data-i18n="communityRoom1Title">Transpacific Writers</h3>
+              <p class="muted" data-i18n="communityRoom1Desc">
+                Lyric swaps in Mandarin, Japanese, and English with bilingual hosts.
+              </p>
+            </article>
+            <article class="card playlist-card">
+              <h3 data-i18n="communityRoom2Title">Afro-Synth Builders</h3>
+              <p class="muted" data-i18n="communityRoom2Desc">
+                Groove scientists sculpting amapiano and highlife hybrids in Ableton.
+              </p>
+            </article>
+            <article class="card playlist-card">
+              <h3 data-i18n="communityRoom3Title">Nu-Cumbia Lab</h3>
+              <p class="muted" data-i18n="communityRoom3Desc">
+                Weekly stems drop, plus peer mastering for Latin club edits.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="trending">
+          <div class="section-header">
+            <div>
+              <p class="mini-label" data-i18n="communitySpotlightsTitle">Workshops & spotlights</p>
+              <h2 data-i18n="communitySpotlightsSubtitle">Hosted by rotating curators.</h2>
+            </div>
+          </div>
+          <div class="card-grid">
+            <article class="card playlist-card">
+              <h3 data-i18n="communityWorkshop1Title">Stories in 16 bars</h3>
+              <p class="muted" data-i18n="communityWorkshop1Desc">
+                Poet Anika teaches phrasing techniques for multi-language hooks.
+              </p>
+            </article>
+            <article class="card playlist-card">
+              <h3 data-i18n="communityWorkshop2Title">Mix clinic: vinyl warmth</h3>
+              <p class="muted" data-i18n="communityWorkshop2Desc">
+                Live breakdown on saturation chains for lo-fi drums.
+              </p>
+            </article>
+            <article class="card playlist-card">
+              <h3 data-i18n="communityWorkshop3Title">Feedback roulette</h3>
+              <p class="muted" data-i18n="communityWorkshop3Desc">
+                Spin the wheel, drop a WIP, and get rapid critiques.
+              </p>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p data-i18n="footerTag">Built for music makers everywhere.</p>
+        <small>&copy; <span id="year"></span> BeatShare</small>
+      </footer>
+    </div>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>

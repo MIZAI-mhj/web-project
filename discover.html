@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BeatShare · Global Music Sharing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="discover">
+    <div class="page">
+      <header class="site-header">
+        <a class="logo" href="index.html">BeatShare</a>
+        <nav class="nav">
+          <a class="nav-link active" href="discover.html" data-i18n="navDiscover" aria-current="page">Discover</a>
+          <a class="nav-link" href="community.html" data-i18n="navCommunity">Community</a>
+          <a class="nav-link" href="create.html" data-i18n="navCreate">Create</a>
+        </nav>
+        <div class="language-picker">
+          <label for="languageSelect" data-i18n="languageLabel">Language</label>
+          <select id="languageSelect" aria-label="Language selector">
+            <option value="en">English</option>
+            <option value="zh">中文</option>
+            <option value="es">Español</option>
+            <option value="jp">日本語</option>
+          </select>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero discover-hero">
+          <div class="hero-text">
+            <p class="hero-label" data-i18n="discoverHeroLabel">Dig deeper</p>
+            <h1 data-i18n="discoverHeroTitle">Global crates, updated hourly.</h1>
+            <p class="hero-sub" data-i18n="discoverHeroSubtitle">
+              Follow tastemakers from Lagos, Kyoto, and Bogotá. Every refresh pulls a
+              fresh set of underground uploads tailored to your vibe.
+            </p>
+            <div class="hero-actions">
+              <button class="primary" data-i18n="discoverCta">Start listening</button>
+            </div>
+          </div>
+          <article class="hero-card filter-card">
+            <p class="mini-label" data-i18n="discoverFilterLabel">Filter moods</p>
+            <div class="pill-group">
+              <button class="pill active" data-i18n="filterAll">All</button>
+              <button class="pill" data-i18n="filterBass">Bass heavy</button>
+              <button class="pill" data-i18n="filterChill">Chill / study</button>
+              <button class="pill" data-i18n="filterGlobal">Global club</button>
+              <button class="pill" data-i18n="filterExperimental">Experimental</button>
+            </div>
+          </article>
+        </section>
+
+        <section class="trending">
+          <div class="section-header">
+            <div>
+              <p class="mini-label" data-i18n="discoverPlaylistsTitle">Curated journeys</p>
+              <h2 data-i18n="discoverPlaylistsSubtitle">
+                Fresh sequences from resident curators.
+              </h2>
+            </div>
+          </div>
+          <div class="card-grid">
+            <article class="card playlist-card">
+              <h3 data-i18n="discoverPlaylist1Title">Global Pulse</h3>
+              <p class="muted" data-i18n="discoverPlaylist1Desc">
+                Basslines from Nairobi to Busan. Heavy subs, featherweight synths.
+              </p>
+              <span class="meta" data-i18n="discoverPlaylist1Meta">Updated by Miho · 32 tracks</span>
+            </article>
+            <article class="card playlist-card">
+              <h3 data-i18n="discoverPlaylist2Title">Midnight Bloom</h3>
+              <p class="muted" data-i18n="discoverPlaylist2Desc">
+                Soft-focus R&B fused with vapor jazz for headphones after dark.
+              </p>
+              <span class="meta" data-i18n="discoverPlaylist2Meta">Sequenced by Lila · 24 tracks</span>
+            </article>
+            <article class="card playlist-card">
+              <h3 data-i18n="discoverPlaylist3Title">Coast 2 Cloud</h3>
+              <p class="muted" data-i18n="discoverPlaylist3Desc">
+                Baile funk, jersey edits, and amapiano drops in one kinetic stream.
+              </p>
+              <span class="meta" data-i18n="discoverPlaylist3Meta">Handpicked by Otávio · 28 tracks</span>
+            </article>
+          </div>
+        </section>
+
+        <section class="card schedule-card">
+          <p class="mini-label" data-i18n="discoverScheduleTitle">Live dig schedule</p>
+          <h2 data-i18n="discoverScheduleSubtitle">Tune into collector rooms.</h2>
+          <ul class="schedule">
+            <li>
+              <div>
+                <strong data-i18n="discoverScheduleResidencyTitle">Residency · Indigo Station</strong>
+                <span class="muted" data-i18n="discoverScheduleResidencyDesc">Analog house breaks from Nairobi.</span>
+              </div>
+              <span data-i18n="discoverScheduleResidencyTime">Sat · 09:00 GMT</span>
+            </li>
+            <li>
+              <div>
+                <strong data-i18n="discoverScheduleRemixTitle">Remix lab · Cloud Atlas</strong>
+                <span class="muted" data-i18n="discoverScheduleRemixDesc">Community stems review and swaps.</span>
+              </div>
+              <span data-i18n="discoverScheduleRemixTime">Wed · 14:30 GMT</span>
+            </li>
+            <li>
+              <div>
+                <strong data-i18n="discoverScheduleCipherTitle">Cipher · Borderless BPM</strong>
+                <span class="muted" data-i18n="discoverScheduleCipherDesc">Producers trade loops in real time.</span>
+              </div>
+              <span data-i18n="discoverScheduleCipherTime">Fri · 19:00 GMT</span>
+            </li>
+          </ul>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p data-i18n="footerTag">Built for music makers everywhere.</p>
+        <small>&copy; <span id="year"></span> BeatShare</small>
+      </footer>
+    </div>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
